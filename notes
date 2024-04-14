@@ -1,5 +1,12 @@
 Next UI
-npm i @nextui-org/react framer-motion
+npm i @nextui-org / react framer - motion
 
 config ->
-npm i jotai
+    npm i jotai
+
+
+// If create a file with name Conventation as ->  { types.d.ts } the inner types that are configured will work globaly ans need not to be imported
+
+
+// this is used to create the horizontall scrolling effect of images
+npm i react - fast - marquee                 /// lightweight React component that harnesses the power of CSS animations to create silky smooth marquees.

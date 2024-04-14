@@ -2,6 +2,7 @@ import Link from 'next/link'
 import React from 'react'
 import Logo from './logo'
 import NavItems from './nav.items'
+import Toolbar from './toolbar'
 
 const Header = () => {
     return (
@@ -10,9 +11,12 @@ const Header = () => {
                 <Link href={'/'}>
                     <Logo />
                 </Link>
-                <div>
-                    <NavItems />
-                </div>
+            </div>
+            <div>
+                <NavItems />
+            </div>
+            <div className="flex items-center gap-3">
+                <Toolbar />
             </div>
         </header>
     )
