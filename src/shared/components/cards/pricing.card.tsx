@@ -1,11 +1,9 @@
-"use client";
-
 // import { stripeSubscribe } from "@/actions/stripe.subscribe";
 import { GrowPlan, freePlan, scalePlan } from "@/app/configs/constants";
 import { ICONS } from "@/shared/utils/icons";
 // import { useUser } from "@clerk/nextjs";
 import { Button } from "@nextui-org/button";
-// import { useRouter } from "next/navigation";
+import { useRouter } from "next/navigation";
 
 const PricingCard = ({ active }: { active: string }) => {
     // const { user } = useUser();
@@ -32,7 +30,7 @@ const PricingCard = ({ active }: { active: string }) => {
                     <path
                         fill="#fff"
                         stroke="#3843D0"
-                        stroke-width="3"
+                        strokeWidth="3"
                         d="M33.398 13.25a6.512 6.512 0 0 1 0 6.5l-4.887 8.487a6.512 6.512 0 0 1-5.643 3.263h-9.736a6.512 6.512 0 0 1-5.643-3.263L2.602 19.75a6.512 6.512 0 0 1 0-6.498l4.887-8.488A6.512 6.512 0 0 1 13.132 1.5h9.736a6.512 6.512 0 0 1 5.643 3.263l4.887 8.488Z"
                     ></path>
                 </svg>
@@ -76,7 +74,7 @@ const PricingCard = ({ active }: { active: string }) => {
                     <path
                         fill="#fff"
                         stroke="#3843D0"
-                        stroke-width="3"
+                        strokeWidth="3"
                         d="M33.398 13.25a6.512 6.512 0 0 1 0 6.5l-4.887 8.487a6.512 6.512 0 0 1-5.643 3.263h-9.736a6.512 6.512 0 0 1-5.643-3.263L2.602 19.75a6.512 6.512 0 0 1 0-6.498l4.887-8.488A6.512 6.512 0 0 1 13.132 1.5h9.736a6.512 6.512 0 0 1 5.643 3.263l4.887 8.488Z"
                     ></path>
                 </svg>
@@ -104,19 +102,19 @@ const PricingCard = ({ active }: { active: string }) => {
                     color="primary"
                     className="w-full text-xl !py-6"
                 // onClick={() =>
-                //     handleSubscription({
-                //         price:
-                //             active === "Monthly"
-                //                 ? "price_1OnaWFSA1WAzNgKlsGN6K4ZW"
-                //                 : "price_1Onbt8SA1WAzNgKlyrXYlJBG",
-                //     })
+                // handleSubscription({
+                //     price:
+                //         active === "Monthly"
+                //             ? "price_1OnaWFSA1WAzNgKlsGN6K4ZW"
+                //             : "price_1Onbt8SA1WAzNgKlyrXYlJBG",
+                // })
                 // }
                 >
                     Get Started
                 </Button>
                 <p className="pt-1 opacity-[.7] text-center">
                     30-day free trial of Scale features, then $
-                    {active === "Mont   hly" ? "42" : "49"}/mo
+                    {active === "Monthly" ? "42" : "49"}/mo
                 </p>
             </div>
 
@@ -132,7 +130,7 @@ const PricingCard = ({ active }: { active: string }) => {
                     <path
                         fill="#fff"
                         stroke="#3843D0"
-                        stroke-width="3"
+                        strokeWidth="3"
                         d="M33.398 13.25a6.512 6.512 0 0 1 0 6.5l-4.887 8.487a6.512 6.512 0 0 1-5.643 3.263h-9.736a6.512 6.512 0 0 1-5.643-3.263L2.602 19.75a6.512 6.512 0 0 1 0-6.498l4.887-8.488A6.512 6.512 0 0 1 13.132 1.5h9.736a6.512 6.512 0 0 1 5.643 3.263l4.887 8.488Z"
                     ></path>
                 </svg>

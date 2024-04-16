@@ -46,7 +46,7 @@ const FooterLogo = () => {
                 </g>
             </svg>
             <h5 className="absolute right-[0px] pt-1 font-medium text-2xl">
-                Becodemy
+                shhiivvaam
             </h5>
         </div>
     );
