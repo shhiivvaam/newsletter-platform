@@ -1,31 +1,31 @@
 "use client";
 import { useUser } from "@clerk/nextjs";
 
-// import DashboardOverViewCard from "@/shared/components/cards/overview.card";
-// import SubscribersChart from "@/shared/components/charts/subscribers.chart";
+import DashboardOverViewCard from "@/shared/components/cards/overview.card";
+import SubscribersChart from "@/shared/components/charts/subscribers.chat";
 import { Button } from "@nextui-org/react";
 import { ICONS } from "@/shared/utils/icons";
 import { useState } from "react";
-// import toast from "react-hot-toast";
+import toast from "react-hot-toast";
 import Link from "next/link";
 
 const Main = () => {
     const { user } = useUser();
-    // const [copied, setCopied] = useState(false);
+    const [copied, setCopied] = useState(false);
 
-    // const handleCopyClick = () => {
-    //     const smallText = document.querySelector(".copy-text") as HTMLElement;
-    //     if (smallText) {
-    //         const textToCopy = smallText.innerText;
-    //         navigator.clipboard.writeText(textToCopy).then(() => {
-    //             setCopied(true);
-    //             toast.success("Copied");
-    //             setTimeout(() => {
-    //                 setCopied(false);
-    //             }, 2000);
-    //         });
-    //     }
-    // };
+    const handleCopyClick = () => {
+        const smallText = document.querySelector(".copy-text") as HTMLElement;
+        if (smallText) {
+            const textToCopy = smallText.innerText;
+            navigator.clipboard.writeText(textToCopy).then(() => {
+                setCopied(true);
+                toast.success("Copied");
+                setTimeout(() => {
+                    setCopied(false);
+                }, 2000);
+            });
+        }
+    };
 
     return (
         <div className="p-5 w-full h-screen bg-[#f9fafb]">
@@ -38,9 +38,9 @@ const Main = () => {
             <div className="w-full flex">
                 <div className="w-[65%] min-h-[88vh] pr-5">
                     <br />
-                    {/* <DashboardOverViewCard /> */}
+                    <DashboardOverViewCard />
                     <br />
-                    {/* <SubscribersChart /> */}
+                    <SubscribersChart />
                 </div>
                 <div className="w-[35%] p-5">
                     {/* create newsletter button */}
@@ -61,15 +61,15 @@ const Main = () => {
 
                                 <div
                                     className="w-full px-2 my-1 h-[38px] bg-transparent border rounded-lg relative flex items-center cursor-pointer"
-                                // onClick={handleCopyClick}
+                                    onClick={handleCopyClick}
                                 >
-                                    {/* <small
+                                    <small
                                         className={`w-[70%] text-sm overflow-hidden overflow-ellipsis whitespace-nowrap copy-text ${copied ? "bg-blue-200" : "bg-transparent"
                                             }`}
                                     >
                                         {process.env.NEXT_PUBLIC_WEBSITE_URL}/subscribe?username=
                                         {user?.username}
-                                    </small> */}
+                                    </small>
                                     <div className="absolute h-[38px] w-[90px] rounded-r-lg bg-[#DFE7FF] right-0 flex items-center justify-center">
                                         <span className="text-lg">{ICONS.copy}</span>
                                         <span className="pl-1">copy</span>
